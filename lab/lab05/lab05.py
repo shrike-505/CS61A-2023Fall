@@ -15,7 +15,9 @@ def berry_finder(t):
     >>> berry_finder(t)
     True
     """
-    "*** YOUR CODE HERE ***"
+    if is_leaf(t):
+        return label(t) == 'berry'
+    return label(t) == 'berry' or berry_finder(branches(t))
 
 
 def replace_loki_at_leaf(t, lokis_replacement):

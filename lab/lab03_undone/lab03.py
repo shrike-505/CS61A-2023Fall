@@ -77,8 +77,23 @@ def nearest_two(x):
 
     """
     power_of_two = 1.0
-    
-    return power_of_two
+    flag = 0
+    if 2**power_of_two > x:
+        flag = 1
+    while flag:
+        if 2 ** power_of_two < x:
+            return 2 ** min(power_of_two+1, power_of_two, key= lambda y:abs(x - 2**y))
+        elif 2 ** power_of_two == x:
+            return float(x)
+        else:
+            power_of_two -= 1
+    while not flag:
+        if 2 ** power_of_two > x:
+            return 2 ** min(power_of_two, power_of_two-1, key= lambda y:abs(x - 2**y))
+        elif 2 ** power_of_two == x:
+            return float(x)
+        else:
+            power_of_two += 1
 
 
 def make_repeater(func, n):
@@ -133,7 +148,7 @@ def div_by_primes_under(n):
     False
     """
     checker = lambda x: False
-    i = 
+    i = ____
     while ____________________________:
         if not checker(i):
             checker = ____________________________
