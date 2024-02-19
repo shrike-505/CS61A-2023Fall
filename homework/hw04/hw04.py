@@ -5,8 +5,8 @@ def filter(condition, lst):
     >>> original_list
     [2, 0]
     """
-    for elem in lst:
-        if condition(elem):
+    for elem in lst[:]:
+        if not condition(elem):
             lst.remove(elem)
 
 
@@ -34,7 +34,16 @@ def deep_map_mut(func, lst):
     >>> s3 is s2[1]
     True
     """
-    "*** YOUR CODE HERE ***"
+    # for elem_may_be_list in lst[:]:
+    #     if type(elem_may_be_list) == list:
+    #         deep_map_mut(func, elem_may_be_list)
+    #     else:
+    #         elem_may_be_list = func(elem_may_be_list)
+    for i in range(len(lst)):
+        if type(lst[i])==list:
+            deep_map_mut(func, lst[i])
+        else:
+            lst[i] = func(lst[i])
 
 
 HW_SOURCE_FILE=__file__
@@ -49,7 +58,9 @@ def max_path_sum(t):
     >>> max_path_sum(t2) # 5, 2, 10
     17
     """
-    "*** YOUR CODE HERE ***"
+    if is_leaf(t):
+        return label(t)
+    return label(t) + max([max_path_sum(branch) for branch in branches(t)])
 
 
 HW_SOURCE_FILE=__file__
@@ -86,7 +97,20 @@ def has_path(t, word):
     False
     """
     assert len(word) > 0, 'no path for empty word.'
-    "*** YOUR CODE HERE ***"
+    if len(word) == 1 or is_leaf(t):
+        if label(t) == word:
+            return True
+        else:
+            return False
+    elif label(t) != word[0]:
+        return False
+    else:
+        for branch in branches(t):
+            if has_path(branch, word[1:]):
+                return True
+        return False
+
+
 
 
 
