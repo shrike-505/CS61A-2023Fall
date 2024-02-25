@@ -3,6 +3,7 @@
 My codes in CS61A-23Fall  
 Spurred by [HobbitQia](https://github.com/HobbitQia)  
 Notes on <https://shrike505.cc/notes/cs61a/>  
+
 ---
 Current process:
 - ✅ **Lab**
@@ -13,7 +14,7 @@ Current process:
   - [x] [Lab04](./lab/lab04/lab04.py)
   - [x] [Lab05](./lab/lab05/lab05.py)
   - [x] [Lab06](./lab/lab06/lab06.py)
-  - [ ] Lab07
+  - [ ] [Lab07](./lab/lab07/lab07.py)
   - [ ] Lab08
   - [ ] Lab09
   - [ ] Lab10
@@ -34,5 +35,5 @@ Current process:
 - ✅ **Project**
   - [x] [Hog](./proj/hog/hog.py)
   - [x] [Cats](./proj/cats/cats.py)
-  - [ ] Ants
+  - [x] [Ants](./proj/ants/ants.py)
   - [ ] Scheme
