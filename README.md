@@ -14,7 +14,7 @@ Current process:
   - [x] [Lab04](./lab/lab04/lab04.py)
   - [x] [Lab05](./lab/lab05/lab05.py)
   - [x] [Lab06](./lab/lab06/lab06.py)
-  - [ ] [Lab07](./lab/lab07/lab07.py)
+  - [x] [Lab07](./lab/lab07/lab07.py)
   - [ ] Lab08
   - [ ] Lab09
   - [ ] Lab10
